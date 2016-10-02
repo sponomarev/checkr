@@ -16,6 +16,16 @@ module Checkr
       handle_response(response)
     end
 
+    def self.update(id, params={}, api_key=nil)
+      response = self.post(
+        "/candidates/#{id}",
+        :body => params,
+        :basic_auth => Checkr.auth(api_key)
+      )
+
+      handle_response(response)
+    end
+
     def self.construct(params)
       reports = params["reports"]
  	    candidate = self.new(params.except_key('reports'))
