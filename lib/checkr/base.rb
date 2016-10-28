@@ -4,7 +4,7 @@ require 'ostruct'
 module Checkr
   class Base < OpenStruct
     include HTTParty
-    base_uri "https://api.checkr.io/v1"
+    base_uri "https://api.checkr.com/v1"
 
     def self.construct(params)
       new(params)
