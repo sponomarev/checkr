@@ -1,6 +1,7 @@
 require "checkr/base"
 require "checkr/version"
 require "checkr/core_ext"
+require "checkr/invitation"
 require "checkr/candidate"
 require "checkr/subaccount"
 require "checkr/report"
